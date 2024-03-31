@@ -1,4 +1,4 @@
-# ETH Seoul 2024 - Gajami Team Project 
+# ETH Seoul 2024 - Gajami Team 
 https://ethseoul2024.devfolio.co/overview
 
 
@@ -22,13 +22,14 @@ https://docs.near.org/ko/abstraction/what-is
 
 ## System Flow
 ### sign up
-
+<img width="1125" alt="스크린샷 2024-03-30 오후 10 47 10" src="https://github.com/ETH-SEOUL-2024/gajami/assets/54282927/e8e2284c-fe61-4a65-be47-cb385f99b2c3">
 
 ### login 
+<img width="1047" alt="스크린샷 2024-03-30 오후 10 50 17" src="https://github.com/ETH-SEOUL-2024/gajami/assets/54282927/85a8f189-346b-41cd-98a1-1c57a0267f28">
 
 
 ### AI consultant & multichains airdrop
-
+<img width="1285" alt="스크린샷 2024-03-30 오후 11 02 20" src="https://github.com/ETH-SEOUL-2024/gajami/assets/54282927/09b4e446-eedf-4ee3-9238-7afa7064370c">
 
 
 ## Team Member 
