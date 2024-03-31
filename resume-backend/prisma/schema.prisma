@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  nearAccountId String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  skills      Skill[]
+  balance     UserBalance?
+}
+
+model UserBalance {
+  id          Int      @id @default(autoincrement())
+  userId      Int @unique
+  ethBalance     String      @default("0")
+  nearBalance    String      @default("0")
+  user        User @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+}
+
+model Skill {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  data        Json 
+  reward      Json @default("{}")
+  rewarded    Boolean @default(false)
+  user        User @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+}
+
+model DidDocument {
+  id          String  @id
+  email       String  @unique
+  publicKey   Json[] 
+  context     String[] @default(["https://www.w3.org/ns/did/v1"])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+}
